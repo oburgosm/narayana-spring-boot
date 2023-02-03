@@ -16,15 +16,21 @@
 
 package me.snowdrop.boot.narayana.generic;
 
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.fail;
+import static org.awaitility.Awaitility.await;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.anyInt;
+import static org.mockito.Mockito.when;
+
 import java.time.Duration;
 import java.util.LinkedList;
 import java.util.List;
 
-import javax.transaction.TransactionManager;
+import com.arjuna.ats.jta.recovery.XAResourceRecoveryHelper;
+import jakarta.transaction.TransactionManager;
 import javax.transaction.xa.XAResource;
 import javax.transaction.xa.Xid;
-
-import com.arjuna.ats.jta.recovery.XAResourceRecoveryHelper;
 import me.snowdrop.boot.narayana.app.EntriesService;
 import me.snowdrop.boot.narayana.app.Entry;
 import me.snowdrop.boot.narayana.app.MessagesService;
@@ -39,13 +45,6 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.Assertions.fail;
-import static org.awaitility.Awaitility.await;
-import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.ArgumentMatchers.anyInt;
-import static org.mockito.BDDMockito.when;
 
 /**
  * @author <a href="mailto:gytis@redhat.com">Gytis Trikleris</a>

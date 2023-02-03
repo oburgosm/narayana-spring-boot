@@ -16,11 +16,13 @@
 
 package me.snowdrop.boot.narayana.generic;
 
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.awaitility.Awaitility.await;
+
 import java.time.Duration;
 
-import javax.transaction.Transaction;
-import javax.transaction.TransactionManager;
-
+import jakarta.transaction.Transaction;
+import jakarta.transaction.TransactionManager;
 import me.snowdrop.boot.narayana.app.EntriesService;
 import me.snowdrop.boot.narayana.app.Entry;
 import me.snowdrop.boot.narayana.app.MessagesService;
@@ -30,9 +32,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.awaitility.Awaitility.await;
 
 /**
  * @author <a href="mailto:gytis@redhat.com">Gytis Trikleris</a>

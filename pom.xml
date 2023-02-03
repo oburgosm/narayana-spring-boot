@@ -53,9 +53,9 @@
     <awaitility.version>4.0.3</awaitility.version>
     <byteman.version>4.0.19</byteman.version>
     <camel-spring-boot.version>3.14.2</camel-spring-boot.version>
-    <narayana.version>6.0.0.CR1</narayana.version>
+    <narayana.version>5.13.1.Final</narayana.version>
     <openshift-client.version>4.9.0</openshift-client.version>
-    <spring-boot.version>3.0.1</spring-boot.version>
+    <spring-boot.version>3.0.2</spring-boot.version>
     <jboss-transaction-spi.version>7.6.1.Final</jboss-transaction-spi.version>
 
     <maven-checkstyle-plugin.version>3.1.1</maven-checkstyle-plugin.version>
@@ -88,7 +88,7 @@
       </dependency>
       <dependency>
         <groupId>org.jboss.narayana.jta</groupId>
-        <artifactId>narayana-jta</artifactId>
+        <artifactId>narayana-jta-jakarta</artifactId>
         <version>${narayana.version}</version>
       </dependency>
       <dependency>
