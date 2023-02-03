@@ -56,7 +56,6 @@
     <narayana.version>5.13.1.Final</narayana.version>
     <openshift-client.version>4.9.0</openshift-client.version>
     <spring-boot.version>3.0.2</spring-boot.version>
-    <jboss-transaction-spi.version>7.6.1.Final</jboss-transaction-spi.version>
 
     <maven-checkstyle-plugin.version>3.1.1</maven-checkstyle-plugin.version>
     <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
@@ -131,11 +130,6 @@
         <artifactId>byteman-bmunit5</artifactId>
         <version>${byteman.version}</version>
       </dependency>
-       <dependency>
-          <groupId>org.jboss</groupId>
-          <artifactId>jboss-transaction-spi</artifactId>
-          <version>${jboss-transaction-spi.version}</version>
-        </dependency>
     </dependencies>
   </dependencyManagement>
 
