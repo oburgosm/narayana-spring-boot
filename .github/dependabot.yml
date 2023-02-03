@@ -1,0 +1,11 @@
+version: 2
+updates:
+  - package-ecosystem: "maven"
+    rebase-strategy: "disabled"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    #Default is 5
+    open-pull-requests-limit: 10
+    labels:
+      - "dependency"
