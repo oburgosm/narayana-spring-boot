@@ -16,11 +16,10 @@
 
 package me.snowdrop.boot.narayana.core.jms;
 
-import javax.jms.ConnectionFactory;
-import javax.jms.XAConnectionFactory;
-import javax.transaction.TransactionManager;
-
 import com.arjuna.ats.internal.jta.recovery.arjunacore.XARecoveryModule;
+import jakarta.jms.ConnectionFactory;
+import jakarta.jms.XAConnectionFactory;
+import jakarta.transaction.TransactionManager;
 import me.snowdrop.boot.narayana.core.properties.RecoveryCredentialsProperties;
 import org.jboss.narayana.jta.jms.ConnectionFactoryProxy;
 import org.jboss.narayana.jta.jms.TransactionHelperImpl;

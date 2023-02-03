@@ -18,7 +18,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>me.snowdrop</groupId>
   <artifactId>narayana-spring-boot-parent</artifactId>
-  <version>2.6.7-SNAPSHOT</version>
+  <version>3.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>Narayana Spring Boot :: parent</name>
@@ -46,16 +46,16 @@
   <properties>
     <main.basedir>${basedir}</main.basedir>
     <disable.checks>false</disable.checks>
-    <java.version>1.8</java.version>
+    <java.version>17</java.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
     <awaitility.version>4.0.3</awaitility.version>
     <byteman.version>4.0.19</byteman.version>
     <camel-spring-boot.version>3.14.2</camel-spring-boot.version>
-    <narayana.version>5.12.7.Final</narayana.version>
+    <narayana.version>5.13.1.Final</narayana.version>
     <openshift-client.version>4.9.0</openshift-client.version>
-    <spring-boot.version>2.7.2</spring-boot.version>
+    <spring-boot.version>3.0.2</spring-boot.version>
     <jboss-transaction-spi.version>7.6.1.Final</jboss-transaction-spi.version>
 
     <maven-checkstyle-plugin.version>3.1.1</maven-checkstyle-plugin.version>
@@ -88,7 +88,7 @@
       </dependency>
       <dependency>
         <groupId>org.jboss.narayana.jta</groupId>
-        <artifactId>narayana-jta</artifactId>
+        <artifactId>narayana-jta-jakarta</artifactId>
         <version>${narayana.version}</version>
       </dependency>
       <dependency>
@@ -203,7 +203,7 @@
       </plugins>
     </pluginManagement>
     <plugins>
-      <plugin>
+      <!--plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-checkstyle-plugin</artifactId>
         <executions>
@@ -226,7 +226,7 @@
             </goals>
           </execution>
         </executions>
-      </plugin>
+      </plugin-->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>

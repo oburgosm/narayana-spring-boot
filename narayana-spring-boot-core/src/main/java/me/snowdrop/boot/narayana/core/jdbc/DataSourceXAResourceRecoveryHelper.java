@@ -18,13 +18,12 @@ package me.snowdrop.boot.narayana.core.jdbc;
 
 import java.sql.SQLException;
 
+import com.arjuna.ats.jta.recovery.XAResourceRecoveryHelper;
 import javax.sql.XAConnection;
 import javax.sql.XADataSource;
 import javax.transaction.xa.XAException;
 import javax.transaction.xa.XAResource;
 import javax.transaction.xa.Xid;
-
-import com.arjuna.ats.jta.recovery.XAResourceRecoveryHelper;
 import org.jboss.logging.Logger;
 
 /**

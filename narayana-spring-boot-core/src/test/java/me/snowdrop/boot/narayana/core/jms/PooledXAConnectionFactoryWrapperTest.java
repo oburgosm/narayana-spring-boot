@@ -16,11 +16,17 @@
 
 package me.snowdrop.boot.narayana.core.jms;
 
-import javax.jms.ConnectionFactory;
-import javax.jms.XAConnectionFactory;
-import javax.transaction.TransactionManager;
+
+
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.BDDMockito.given;
+import static org.mockito.Mockito.verify;
 
 import com.arjuna.ats.internal.jta.recovery.arjunacore.XARecoveryModule;
+import jakarta.jms.ConnectionFactory;
+import jakarta.jms.XAConnectionFactory;
+import jakarta.transaction.TransactionManager;
 import me.snowdrop.boot.narayana.core.properties.MessagingHubConnectionFactoryProperties;
 import me.snowdrop.boot.narayana.core.properties.RecoveryCredentialsProperties;
 import org.jboss.narayana.jta.jms.JmsXAResourceRecoveryHelper;
@@ -30,11 +36,6 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.messaginghub.pooled.jms.JmsPoolXAConnectionFactory;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
-
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.BDDMockito.given;
-import static org.mockito.Mockito.verify;
 
 @ExtendWith(MockitoExtension.class)
 class PooledXAConnectionFactoryWrapperTest {

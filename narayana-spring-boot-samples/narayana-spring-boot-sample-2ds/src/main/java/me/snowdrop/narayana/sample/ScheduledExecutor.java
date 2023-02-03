@@ -18,9 +18,8 @@ package me.snowdrop.narayana.sample;
 
 import java.util.Random;
 
+import jakarta.transaction.Transactional;
 import javax.sql.DataSource;
-import javax.transaction.Transactional;
-
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.scheduling.annotation.Scheduled;

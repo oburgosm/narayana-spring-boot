@@ -16,20 +16,21 @@
 
 package me.snowdrop.boot.narayana.autoconfigure;
 
-import javax.jms.ConnectionFactory;
-import javax.sql.DataSource;
-import javax.transaction.TransactionManager;
+
+
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.verify;
 
 import com.arjuna.ats.jbossatx.jta.RecoveryManagerService;
+import jakarta.jms.ConnectionFactory;
+import jakarta.transaction.TransactionManager;
+import javax.sql.DataSource;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.verify;
 
 /**
  * Tests for {@link NarayanaBeanFactoryPostProcessor}.
