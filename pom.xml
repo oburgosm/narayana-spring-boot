@@ -319,7 +319,7 @@
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-gpg-plugin</artifactId>
-            <version>1.6</version>
+            <version>3.0.1</version>
             <!--
               Needed to bypass the encoding of the passphrase when task is executed by a job and not a human
               Syntax could change with future releases of the plugin (after 3.0.0)
